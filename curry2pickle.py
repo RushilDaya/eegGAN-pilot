@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 
 
-def preProcessRawData(fileGroupName,save=False,writePath=None):
+def curry2pickle(fileGroupName,save=False,writePath=None):
 
     fileNameCeo = fileGroupName + '.ceo'
     fileNameDap = fileGroupName + '.dap'
@@ -71,5 +71,5 @@ def preProcessRawData(fileGroupName,save=False,writePath=None):
     return True
 
 if __name__ == '__main__':
-    exitCode = preProcessRawData('./rawData/subject_1/onoff')
+    exitCode = curry2pickle('./rawData/subject_1/onoff')
     print(exitCode)
